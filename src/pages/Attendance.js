@@ -13,8 +13,8 @@ const Attendance = () => {
   }, []);
 
   const fetchAttendance = async () => {
-    try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/employees");
+    try {      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/employees");
+
       setAttendanceData(response.data);
       console.log("Fetched Attendance:", response.data);
     } catch (error) {
@@ -25,7 +25,7 @@ const Attendance = () => {
   const handleStatusChange = async (id, newStatus) => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.put(`https://hr-server-backend.onrender.com/api/employees/attendance/${id}`, { status: newStatus }, {
+      const response = await axios.put(`https://hr-dachboard-backend.onrender.com/api/employees/attendance/${id}`, { status: newStatus }, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

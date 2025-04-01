@@ -31,7 +31,7 @@ const Leave = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/employees");
+      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/employees");
       const presentEmployees = response.data.filter(emp => emp.status === 'Present');
       setEmployees(presentEmployees);
     } catch (error) {
@@ -41,7 +41,7 @@ const Leave = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/leaves");
+      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/leaves");
       setLeaves(response.data.data.leaves);
     } catch (error) {
       console.error("Error fetching leaves:", error);
@@ -50,7 +50,7 @@ const Leave = () => {
 
   const fetchApprovedLeaves = async () => {
     try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/leaves/approved");
+      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/leaves/approved");
       const approvedLeaves = response.data.data.leaves;
       // Update state or handle the approved leaves as needed
     } catch (error) {
@@ -61,7 +61,7 @@ const Leave = () => {
   // Function to handle status change
   const handleStatusChange = async (leaveId, newStatus) => {
     try {
-      const response = await axios.put(`https://hr-server-backend.onrender.com/api/leaves/${leaveId}`, {
+      const response = await axios.put(`https://hr-dachboard-backend.onrender.com/api/leaves/${leaveId}`, {
         status: newStatus
       });
 
@@ -185,7 +185,7 @@ const Leave = () => {
       }
 
       const response = await axios.post(
-        "https://hr-server-backend.onrender.com/api/leaves/", 
+        "https://hr-dachboard-backend.onrender.com/api/leaves/", 
         formDataToSend,
         {
           headers: {

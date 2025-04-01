@@ -38,7 +38,7 @@ const Employees = () => {
 
   const fetchEmployee = async () => {
     try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/employees", {
+      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/employees", {
         
       });
       setEmployees(response.data);
@@ -51,7 +51,7 @@ const Employees = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`https://hr-server-backend.onrender.com/api/employees/${id}`, {
+      const response = await axios.delete(`https://hr-dachboard-backend.onrender.com/api/employees/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -71,7 +71,7 @@ const Employees = () => {
   const handleEdit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`https://hr-server-backend.onrender.com/api/employees/${selectedEmployee}`, formData, {
+      const response = await axios.put(`https://hr-dachboard-backend.onrender.com/api/employees/${selectedEmployee}`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -117,7 +117,7 @@ const Employees = () => {
 
   const fetchEmployeeById = async (id) => {
     try {
-      const response = await axios.get(`https://hr-server-backend.onrender.com/api/employees/${id}`, {
+      const response = await axios.get(`https://hr-dachboard-backend.onrender.com/api/employees/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },

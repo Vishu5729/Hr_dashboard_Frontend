@@ -37,7 +37,7 @@ const Candidates = () => {
 
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get("https://hr-server-backend.onrender.com/api/candidates", {
+      const response = await axios.get("https://hr-dachboard-backend.onrender.com/api/candidates", {
        
       });
       setCandidates(response.data);
@@ -79,7 +79,7 @@ const Candidates = () => {
 
     try {
       const response = await axios.post(
-        "https://hr-server-backend.onrender.com/api/candidates",
+        "https://hr-dachboard-backend.onrender.com/api/candidates",
         formDataToSend,
         {
           headers: {
@@ -112,7 +112,7 @@ const Candidates = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`https://hr-server-backend.onrender.com/api/candidates/${id}`, {
+      const response = await axios.delete(`https://hr-dachboard-backend.onrender.com/api/candidates/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -130,7 +130,7 @@ const Candidates = () => {
 
   const fetchCandidateById = async (id) => {
     try {
-      const response = await axios.get(`https://hr-server-backend.onrender.com/api/candidates/${id}`, {
+      const response = await axios.get(`https://hr-dachboard-backend.onrender.com/api/candidates/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -155,7 +155,7 @@ const Candidates = () => {
   const handleEdit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`https://hr-server-backend.onrender.com/api/candidates/${selectedCandidate}`, formData, {
+      const response = await axios.put(`https://hr-dachboard-backend.onrender.com/api/candidates/${selectedCandidate}`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -177,7 +177,7 @@ const Candidates = () => {
       status: newStatus
     }
     try {
-      const response = await axios.post(`https://hr-server-backend.onrender.com/api/candidates/promote/${id}`, payload, {
+      const response = await axios.post(`https://hr-dachboard-backend.onrender.com/api/candidates/promote/${id}`, payload, {
         headers: {
           "Content-Type": "application/json",
           
@@ -204,7 +204,7 @@ const Candidates = () => {
       position: newPosition
     }
     try {
-      const response = await axios.put(`https://hr-server-backend.onrender.com/api/candidates/${id}`, payload, {
+      const response = await axios.put(`https://hr-dachboard-backend.onrender.com/api/candidates/${id}`, payload, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -315,7 +315,7 @@ const Candidates = () => {
                       <div className="dropdown-menu">
                         <div className="dropdown-item">
                           <a
-                            href={`https://hr-server-backend.onrender.com/${c._id}/resume`}
+                            href={`https://hr-dachboard-backend.onrender.com/${c._id}/resume`}
                             download
                             target="_blank"
                             rel="noopener noreferrer"

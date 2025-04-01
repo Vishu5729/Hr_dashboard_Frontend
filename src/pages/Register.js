@@ -33,7 +33,7 @@ function Register() {
     }
 
     try {
-      await axios.post("https://hr-server-backend.onrender.com/api/auth/register", {
+      await axios.post("https://hr-dachboard-backend.onrender.com/api/auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password,

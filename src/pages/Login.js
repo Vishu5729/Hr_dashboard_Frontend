@@ -28,7 +28,7 @@ function Login() {
     setError("");
 
     try {
-      const response = await axios.post("https://hr-server-backend.onrender.com/api/auth/login", formData);
+      const response = await axios.post("https://hr-dachboard-backend.onrender.com/api/auth/login", formData);
       const { token } = response.data;
       const user = {
         _id: response?.data?._id,
