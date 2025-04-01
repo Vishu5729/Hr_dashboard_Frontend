@@ -1,0 +1,334 @@
+/* ✅ Updated Candidates.css – Fully Figma Styled */
+
+.candidates-page {
+    padding: 24px;
+    padding-bottom: 80px;
+    background-color: #f5f6fa;
+    border-radius: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    margin-left: 65px;
+    box-sizing: border-box;
+  }
+  
+  .candidates-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .filters select,
+  .filters input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background-color: white;
+    min-width: 140px;
+  }
+  
+  .add-btn {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .add-btn:hover{
+    color: #ffffff;
+    background-color: #6a1b9a;
+    
+  }
+  
+  /* Table Wrapper */
+  .table-wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 60px;
+  }
+  
+  .candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .candidates-table th,
+  .candidates-table td {
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .candidates-table th {
+    background-color: #6a1b9a;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  
+  /* Status Dropdown Styling */
+  .status-dropdown {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .status-new { border: 1px solid #6a1b9a; color: #6a1b9a; }
+  .status-selected { border: 1px solid #2e7d32; color: #2e7d32; }
+  .status-rejected { border: 1px solid #c62828; color: #c62828; }
+  
+  .action-cell {
+    position: relative;
+  }
+  
+  .dots {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  
+  .dots:hover {
+    background-color: #f0f0f0;
+  }
+  
+ .dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 150px;
+  padding: 8px 0;
+}
+
+  
+  .dropdown-item {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    /* padding: 30px; */
+    border-radius: 14px;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4D007D;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 10px 10px 0 0;
+    /* margin: -30px -30px 20px -30px; */
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .close-btn {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-form {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    max-width:100% !important;
+
+  }
+  
+  .modal-row {
+    width: 100% !important;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+  
+  .form-group label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group label span {
+    color: red;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 2px 14px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    /* max-width: 80%;/ */
+  }
+  .candidate-form  input[type="text"],
+  .candidate-form  input[type="email"] ,
+  .candidate-form  input[type="date"] {
+    padding: 2px 14px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    max-width: 80%;
+  }
+  .candidate-form select {
+    padding: 13px 30px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    max-width: 90%;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus {
+    border-color: #9c27b0;
+  }
+  
+  /* Custom File Input */
+  .custom-file {
+    padding: 10px 14px;
+    border: 1.5px solid #6a1b9a;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: white;
+    color: #333;
+    width: 100%;
+    max-width: 80%;
+  }
+  
+  .custom-file::-webkit-file-upload-button {
+    background: #6a1b9a;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  .custom-file::file-selector-button {
+    background: #6a1b9a;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* Checkbox */
+  .checkbox {
+    font-size: 13px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 8px;
+    color: #333;
+  }
+  
+  /* Save Button */
+  .form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+  @media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        padding: 16px;
+    }
+    
+    .modal-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .form-group input, 
+    .filters select, 
+    .filters input[type="text"] {
+        width: 100%;
+        min-width: auto;
+    }
+}
